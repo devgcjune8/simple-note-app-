@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-top: 2.5em;
+    background: rgb(0, 89, 141);
+    height: auto;
+    margin: 0;
+}
+
+
+.add-btn {
+    position: fixed;
+    top: 1em;
+    left: 0em;
+    background-color: rgb(1, 15, 136);
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1.2em;
+    color: rgb(209, 209, 209);
+    display: flex;
+    align-items: center;
+    width: 10em;
+    font-size: 1em;
+    justify-content: space-around;
+    border-radius: 0 9px 9px 0;
+    z-index: 1;
+}
+
+.add-btn:hover {
+    box-shadow: 0 0 2px black ;
+}
+
+.add-btn:active {
+    transform: rotateY(-15deg) translateX(10px);
+    transition: 0.2s;
+    color: rgb(236, 236, 236);
+    background-color: rgb(30, 38, 87);
+}
+
+.edit-btn {
+    background-color: rgb(255, 242, 53);
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    border-radius: 0 9px 9px 0;
+    position: absolute;
+    left: -0.5px;
+    top: 5px;
+    padding: 0.3em 1em;
+}
+
+.edit-btn:hover {
+    box-shadow: 0 0 2px black ;
+}
+
+.edit-btn:active {
+    transform: translateX(10px);
+    transition: 0.2s;
+    color: rgba(99, 97, 0, 0.979);
+    background-color: rgb(255, 242, 53);
+}
+
+.delete-btn {
+    background-color: rgb(255, 0, 0);
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    border-radius: 9px 0 0 9px;
+    position: absolute;
+    top: 5px;
+    right: -0.5px;
+    padding: 0.3em 1em;
+}
+
+.delete-btn:hover {
+    box-shadow: 0 0 2px black ;
+}
+
+.delete-btn:active {
+    transform: rotateY(-15deg) translateX(-10px);
+    transition: 0.2s;
+    color: rgba(116, 22, 15, 0.979);
+    background-color: rgb(255, 0, 0);
+}
+
+.copy-btn {
+    background-color: rgb(0, 41, 223);
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 9px;
+    position: absolute;
+    top: 5px;
+    left: 45%;
+    padding: 0.3em 0.5em;
+}
+
+.copy-btn:hover {
+    box-shadow: 0 0 2px black ;
+}
+
+.copy-btn:active {
+    transform: scale(0.97);
+    transition: 0.2s;
+    background-color: rgb(0, 200, 207);
+}
+
+/* .paste-btn {
+    background-color: rgb(240, 0, 248);
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 9px;
+    position: absolute;
+    top: 5px;
+    right: 30%;
+
+    padding: 0.3em 0.5em;
+}
+
+.paste-btn:hover {
+    box-shadow: 0 0 2px black ;
+}
+
+.paste-btn:active {
+    transform: scale(0.97);
+    transition: 0.2s;
+    background-color: rgb(207, 0, 197);
+} */
+
+.note-box {
+    position: relative;
+    background-color: rgb(1, 0, 61);
+    margin: 2em 0.8em;
+    box-shadow: 0 0 2px black;
+    width: 40vw;
+    height: 300px;
+    border-radius: 5px;
+    padding: 0.7em;
+
+}
+.note-tools {
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-tools button {
+    border: none;
+
+}
+
+textarea {
+    position: absolute;
+    top: 48px;
+    left: 0px;
+    width: 100%;
+    height: calc(100%);
+    outline: none;
+    font-family: inherit;
+    font-size: 0.9em;
+    resize: none;
+    scrollbar-width: thin;
+    ;
+    
+}
+
+::placeholder {
+    text-align: center;
+    font-family: inherit;
+    font-size: 0.8em;
+}
+
+.note {
+    position: absolute;  
+    background-color: rgb(223, 223, 223);
+    padding: 3px;
+    top: 51px;
+    left: 0px;
+    width: inherit;
+    min-height: 100%;
+    font-size: 0.9em;
+    overflow-x: auto;  
+    scrollbar-width: thin;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.hidden {
+    display: none;
+    transition: 0.43s;
+}
+
